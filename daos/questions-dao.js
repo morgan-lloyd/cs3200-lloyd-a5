@@ -1,5 +1,5 @@
 const questionsModel = require('../models/questions/questions-model.js')
 const findAllQuestions = () => questionsModel.find()
-const findQuestionById = (qId) => questionsModel.find({quizId:qId})
-const findQuestionsForQuiz = (qzid) => questionsModel.find({quizId:qzId})
+const findQuizById = (qId) => questionsModel.findById(qId)
+const findQuestionsForQuiz = (qid) => questionsModel.find({quizId:qId})
 module.exports = { findAllQuizzes, findQuizById, findQuestionsForQuiz }
